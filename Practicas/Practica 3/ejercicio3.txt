@@ -1,0 +1,48 @@
+Crear dentro del directorio personal del usuario logueado un directorio llamado practicashell-script y dentro de él un archivo llamado mostrar.sh cuyo contenido sea el siguiente:
+#!/bin/bash
+# Comentarios acerca de lo que hace el script
+# Siempre comento mis scripts, si no hoy lo hago
+# y mañana ya no me acuerdo de lo que quise hacer
+echo "Introduzca su nombre y apellido:"
+read nombre apellido
+echo "Fecha y hora actual:"
+date
+echo "Su apellido y nombre es:
+echo "$apellido $nombre"
+echo "Su usuario es: `whoami`"
+echo "Su directorio actual es:"
+
+(a) Asignar al archivo creado los permisos necesarios de manera que pueda ejecutarlo
+(b) Ejecutar el archivo creado de la siguiente manera: ./mostrar
+(c) ¿Qué resultado visualiza?
+(d) Las backquotes (`) entre el comando whoami ilustran el uso de la sustitución de comandos. ¿Qué significa esto?
+(e) Realizar modificaciones al script anteriormente creado de manera de poder mostrar
+distintos resultados (cuál es su directorio personal, el contenido de un directorio en
+particular, el espacio libre en disco, etc.). Pida que se introduzcan por teclado (entrada
+estándar) otros datos.
+
+
+c) Se visualiza el pedido de ingreso de nombre y apellido y los distintos echos
+
+d) significa que mediante los backquotes se puede obtener el resultado de ejecutar el comando. 
+en el script de ejemplo, el comando whoami se ejecuta dentro de las backticks. El comando whoami devuelve el nombre de usuario del que 
+está actualmente logueado en el sistema. Entonces, el resultado de whoami se sustituye en la línea de echo, de manera que si el usuario 
+actual es juan, el comando se convierte en: Su usuario es juan
+
+e) #!/bin/bash
+    # Comentarios acerca de lo que hace el script
+    # Siempre comento mis scripts, si no hoy lo hago
+    # y mañana ya no me acuerdo de lo que quise hacer
+    echo "Introduzca su nombre y apellido:"
+    read nombre apellido
+    echo "Fecha y hora actual:"
+    date
+    echo "Su apellido y nombre es:
+    echo "$apellido $nombre"
+    echo "Su usuario es: `whoami`"
+    echo "Su directorio actual es: $(pwd)" 
+    echo "El contenido del directorio actual es: $(ls)"
+    echo "El espacion libre en disco es: $(df)"
+    echo "Ingrese su edad"
+    read edad
+    echo "La edad de $nombre es $edad"

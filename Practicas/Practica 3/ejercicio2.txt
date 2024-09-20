@@ -1,0 +1,18 @@
+Investigar la funcionalidad de los comandos echo y read.
+(a) ¿Como se indican los comentarios dentro de un script?
+(b) ¿Cómo se declaran y se hace referencia a variables dentro de un script?
+
+El comando echo se utiliza para imprimir texto en pantalla y el comando read se utiliza para permitir al usuario que ingrese informacion
+desde teclado.
+
+a) Los comentarios en un script se indican con el caracter #
+b) Para declarar una variable se asigna un valor sin usar espacios alrededor del signo = . 
+Ejemplo:
+nombre="Juan"
+edad=30
+Las variables solo pueden ser de tipo String o array. 
+
+Para referenciar a una variable se usa el prefijo $ antes del nombre de la variable
+Ejemplo:
+echo "El nombre es $nombre y tiene $edad años"
+Ademas podemos hacer referencia de la siguiente manera: $(nombre).

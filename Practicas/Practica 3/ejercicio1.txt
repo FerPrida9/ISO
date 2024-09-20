@@ -1,0 +1,9 @@
+¿Qué es el Shell Scripting? ¿A qué tipos de tareas están orientados los script? ¿Los scripts
+deben compilarse? ¿Por qué?
+
+El shell scripting se refiere a la creacion de scripts o programas escritos en un lenguaje de comandos del sistema operativo, comunmente un
+shell de Unix o Linux. Los scripts son archivos de texto que contienen una serie de comandos que se ejecutan de forma secuencial.
+Los scripts de shell se usan principalmente para automatizacion de tareas repetitivas, gestion del sistema, administracion de archivos, 
+despliegue de software y procesamiento de datos. 
+Los scripts no necesitan ser compilados ya que son interpretados, esto quiere decir que el codigo se ejecuta linea por linea en tiempo
+real.
