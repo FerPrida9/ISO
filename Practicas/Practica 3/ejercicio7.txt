@@ -1,0 +1,30 @@
+El comando “test expresión” permite evaluar expresiones y generar un valor de retorno,
+true o false. Este comando puede ser reemplazado por el uso de corchetes de la siguiente manera [ expresión ]. Investigar 
+que tipo de expresiones pueden ser usadas con el comando test. Tenga en cuenta operaciones para: evaluación de archivos, 
+evaluación de cadenas de caracteres y evaluaciones numéricas
+
+Tipos de operaciones:
+
+- Evaluacion de archivos:
+-e: Verifica si el archivo existe.
+-f: Verifica si el archivo es un archivo regular (no un directorio ni otro tipo de archivo especial).
+-d: Verifica si el archivo es un directorio.
+-r: Verifica si el archivo tiene permiso de lectura.
+-w: Verifica si el archivo tiene permiso de escritura.
+-x: Verifica si el archivo tiene permiso de ejecución.
+-s: Verifica si el archivo no está vacío (su tamaño es mayor que 0).
+-L: Verifica si el archivo es un enlace simbólico.
+
+- Evaluacion de cadenas de caracteres:
+-z: Verifica si la cadena tiene longitud cero (cadena vacía).
+-n: Verifica si la cadena no está vacía (longitud mayor que cero).
+= : Compara si dos cadenas son iguales.
+!=: Compara si dos cadenas son diferentes.
+
+- Evaluacion numerica:
+-eq: Verifica si dos números son iguales.
+-ne: Verifica si dos números son diferentes.
+-lt: Verifica si el primer número es menor que el segundo.
+-le: Verifica si el primer número es menor o igual que el segundo.
+-gt: Verifica si el primer número es mayor que el segundo.
+-ge: Verifica si el primer número es mayor o igual que el segundo

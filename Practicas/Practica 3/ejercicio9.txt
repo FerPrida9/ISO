@@ -1,0 +1,20 @@
+¿Qué acciones realizan las sentencias break y continue dentro de un bucle? ¿Qué parámetros reciben?
+
+Las sentencias break y continue en los bucles de shell scripting controlan el flujo de ejecución al interrumpir o saltar partes del bucle.
+
+1. Sentencia break
+La sentencia break se utiliza para salir inmediatamente de un bucle, ya sea for, while o until. Cuando se ejecuta, el bucle se detiene 
+y el control del programa pasa a la línea siguiente al bucle.
+
+Parámetros: break puede recibir un parámetro opcional que indica el número de niveles de bucles que deben interrumpirse. Por defecto, 
+rompe solo el bucle en el que se encuentra.
+
+2. Sentencia continue
+La sentencia continue se utiliza para saltar la iteración actual de un bucle y pasar a la siguiente iteración, sin salir del bucle. 
+Esto permite omitir ciertas partes del bucle en función de una condición, pero continuar con el bucle.
+
+Comportamiento:
+Cuando se ejecuta continue, el resto del código en la iteración actual se omite, y el bucle avanza a la siguiente iteración.
+Parámetros: 
+Similar a break, continue puede recibir un parámetro opcional para especificar cuántos niveles de bucles deben saltarse. Por defecto, 
+afecta solo al bucle actual.

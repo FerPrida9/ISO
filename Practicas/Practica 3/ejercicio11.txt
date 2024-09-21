@@ -1,0 +1,21 @@
+¿Pueden definirse funciones dentro de un script? ¿Cómo? ¿Cómo se maneja el pasaje de
+parámetros de una función a la otra?
+
+Existen dos formas comunes de definir una función:
+
+Sintaxis 1:
+nombre_funcion() {
+  # Bloque de código de la función
+}
+
+Sintaxis 2 (opcional):
+function nombre_funcion {
+  # Bloque de código de la función
+}
+
+Los parámetros se pasan a la función de forma similar a como se pasan argumentos a un script. Los parámetros dentro de la 
+función se acceden usando las variables posicionales:
+
+$1, $2, $3, ..., se refieren a los argumentos pasados a la función.
+$@ se refiere a todos los parámetros.
+$# devuelve el número de argumentos pasados a la función.

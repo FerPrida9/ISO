@@ -1,0 +1,13 @@
+El comando expr permite la evaluación de expresiones. Su sintaxis es: expr arg1 op arg2,
+donde arg1 y arg2 representan argumentos y op la operación de la expresión. Investigar
+que tipo de operaciones se pueden utilizar
+
+Con el comando expr se pueden utilizar los siguientes tipos de operaciones:
+
+- aritmeticas: suma + , resta - , multiplicacion \* , division / , modulo %
+
+- comparacion: igual = , distinto != , menor < , mayor >, menor o igual <=, mayor o igual >=
+
+- logicas: and & , or |  
+
+- con cadenas: concatenacion (con espacios), longitud de cadena (length), substraccion (substr), coincidencia de patrones :

@@ -1,0 +1,8 @@
+¿Qué tipo de variables existen? ¿Es shell script fuertemente tipado? ¿Se pueden definir
+arreglos? ¿Cómo?
+
+Existen 2 tipos de variables: Strings y arrays
+Shell no es fuertemente tipado, por lo que no es necesario definir el tipo de la variable en su declaracion
+Los arreglos se definen de la siguiente manera:
+arreglo_a=() # Se crea vacio
+arreglo_b=(1 2 3 5 8 13 21) # Inicializado

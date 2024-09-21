@@ -1,0 +1,6 @@
+¿Cual es la funcionalidad de comando exit? ¿Qué valores recibe como parámetro y cual es
+su significado?
+
+El comando exit finaliza la ejecucion de un script o sesion de un shell y devuelve un codigo de salida al sistema operativo o al proceso que 
+invoco al script. Por parametros puede recibir valores (del 0 al 255) que significan los codigos de salida, el 0 indica que el script se 
+ejecuto sin errores, es decir, exitosamente. En cambio, los codigos distintos de 0 indican que hubieron errores. 

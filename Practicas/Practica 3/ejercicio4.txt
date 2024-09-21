@@ -1,0 +1,26 @@
+Parametrización: ¿Cómo se acceden a los parámetros enviados al script al momento de su
+invocación? ¿Qué información contienen las variables $#, $*, $? Y $HOME dentro de un
+script?
+
+Los parámetros enviados al script al momento de su invocación se pueden acceder usando los símbolos $1, $2, $3, etc., 
+donde $1 es el primer parámetro, $2 el segundo, y así sucesivamente.
+Los parametros se pasan al momento de ejecutar el script, de la siguiente manera:
+./nombre_script parametro1 parametro2 
+
+- La variable $# contiene el numero de parametros que fueron pasados al script cuando fue invocado
+  Ejemplo: Si ejecutas el script con ./script.sh arg1 arg2, entonces $# será 2
+
+- La variable $* contiene todos los parametros que fueron pasados al script como una sola cadena de texto
+  donde los parametros estan separados por espacios.
+  Ejemplo: Si ejecutas el script con ./script.sh arg1 arg2, entonces $* será arg1 arg2
+
+- La variable $? contiene el codigo de salida del ultimo comando ejecutado. El valor sera:
+  - 0 si el comando anterior fue exitoso
+  - Un numero distinto de 0 si hubo algun error
+  Ejemplo:
+  Si ejecutas un comando ls dentro del script y se ejecuta correctamente, $? será 0
+
+- La variable $HOME contiene la ruta del directorio home del usuario que ejecuta el script. Este es el directorio
+  principal del usuario en el sistema
+  Ejemplo:
+  Si el usuario es user, entonces $HOME podría ser /home/user en un sistema Linux
