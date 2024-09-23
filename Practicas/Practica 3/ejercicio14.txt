@@ -1,0 +1,56 @@
+Renombrando Archivos: haga un script que renombre solo archivos de un directorio pasado
+como parametro agregandole una CADENA, contemplando las opciones:
+
+“-a CADENA”: renombra el fichero concatenando CADENA al final del nombre del
+archivo
+
+“-b CADENA”: renombra el fichero concantenado CADENA al principio del nombre
+del archivo
+
+Ejemplo:
+
+Si tengo los siguientes archivos: /tmp/a /tmp/b
+Al ejecutar: ./renombra /tmp/ -a EJ
+Obtendré como resultado: /tmp/aEJ /tmp/bEJ
+Y si ejecuto: ./renombra /tmp/ -b EJ
+El resultado será: /tmp/EJa /tmp/EJb
+
+
+# verifico que la cantidad de parametros sean los correctos 
+if [ $# -ne 3 ]; then
+        echo "Se deben pasar 3 parametros para ejecutar el script"
+        exit 1
+fi
+
+# asigno parametros a las variables 
+directorio=$1
+opcion=$2
+cadena=$3
+
+# verifico si el directorio existe 
+if [ ! -d "$directorio" ]; then 
+        echo "El directorio ingresado no existe"
+        exit 1 
+fi
+
+# recorro los archivos del directorio y agrego la cadena
+for archivo in "$directorio"/*; do
+        if [ -f "$archivo" ]; then   # verifico que el archivo no sea un directorio
+                nombreArchivo=$(basename "$archivo") # obtengo el nombre del archivo sin la ruta
+                case $opcion in
+                        "-a")
+                        nuevoNombre="${nombreArchivo}${cadena}"
+                        ;;
+                        "-b")
+                        nuevoNombre="${cadena}${nombreArchivo}"
+                        ;;
+                        *)
+                        echo "Opcion invalida. ingrese -a o -b"
+                        exit 1
+                        ;;
+                esac
+                # renombro el archivo
+                mv -v "$archivo" "$directorio/$nuevoNombre"
+        fi
+done
+echo "operacion finalizada"
