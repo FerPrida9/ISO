@@ -1,0 +1,54 @@
+Uso de las estructuras de control:
+(a) Realizar un script que visualice por pantalla los números del 1 al 100 así como sus
+cuadrados.
+
+(b) Crear un script que muestre 3 opciones al usuario: Listar, DondeEstoy y QuienEsta.
+Según la opción elegida se le debe mostrar:
+Listar: lista el contenido del directoria actual.
+DondeEstoy: muestra el directorio donde me encuentro ubicado.
+QuienEsta: muestra los usuarios conectados al sistema.
+
+(c) Crear un script que reciba como parámetro el nombre de un archivo e informe si el
+mismo existe o no, y en caso afirmativo indique si es un directorio o un archivo. En
+caso de que no exista el archivo/directorio cree un directorio con el nombre recibido
+como parámetro
+
+a)
+calcular_cuadrado(){
+echo "$(expr $1 \* $1)"
+}
+
+for i in {1..10}; do 
+        echo "el numero es: $i y su cuadrado es $(calcular_cuadrado $i)"
+done
+
+b)
+echo "Ingrese la opcion que desea realizar: 1- Listar , 2-DondeEstoy, 3- QuienEsta"
+read option
+case $option in
+        1)
+        echo "$(ls)"
+        ;;
+        2)
+        echo "$(pwd)"
+        ;;
+        3)
+        echo "$(whoami)"
+        ;;
+        *)
+        echo "Por favor seleccione una opcion valida (1,2 o 3)"
+        ;;
+esac
+
+c)
+nombre=$1
+if [ -e "$nombre" ]; then 
+        if [ -d "$nombre" ]; then
+                echo "El archivo $nombre existe y es un directorio"
+        else
+                echo "El archivo $nombre existe y es un archivo"
+        fi
+else 
+        mkdir $nombre
+        echo "El archivo no existe pero ya fue creado como directorio"
+fi
